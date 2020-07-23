@@ -8,15 +8,15 @@ default: &default
 
 development:
   <<: *default
-  database: dep_test_development  #アプリケーション名_developmentとなる
+  database: team4h_development  #アプリケーション名_developmentとなる
 
 test:
   <<: *default
-  database: dep_test_test  #アプリケーション名_testとなる
+  database: team4h_test  #アプリケーション名_testとなる
 
 production:
   <<: *default
-  database: dep_test_production  #アプリケーション名_productionとなる
+  database: team4h_production  #アプリケーション名_productionとなる
   username: root            #rootに変更
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
